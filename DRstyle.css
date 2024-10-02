@@ -1,0 +1,188 @@
+.container::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 200px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.container::before {
+  content: "Patient Database";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 200px;
+  height: 100px;
+  background-color: #000000;
+  color: #ffffff;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transform: translateX(-50%);
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(85, 136, 129);
+  color: white;
+  border-radius: 10px;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+}
+.search-bar {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.patient-list {
+  list-style-type: none;
+  padding: 0;
+  border-radius: 10px;
+}
+.patient-list li {
+  padding: 10px;
+  border-bottom: 1px solid #1c386d;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.patient-details {
+  display: none;
+  margin-top: 10px;
+  text-align: left;
+  border-radius: 10px;
+}
+.add-patient {
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 10px;
+}
+.add-patient-form {
+  display: none;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.add-patient-form input {
+  margin: 5px;
+  border-radius: 10px;
+}
+.add-patient-form textarea {
+  margin: 5px;
+  width: 100%;
+  height: 100px;
+  color: rgb(94, 94, 94);
+  border-radius: 10px;
+}
+.history-entry {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+.add-patient-form button {
+  margin: 5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-patient-form button:first-of-type {
+  background-color: #4caf50;
+  color: white;
+}
+
+.add-patient-form button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-patient-form button:hover {
+  opacity: 0.8;
+}
+.container {
+  position: relative;
+}
+
+.add-patient-form select {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  padding-right: 30px;
+}
+#deletePatientDialog {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#deletePatientDialog div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#deletePatientDialog p {
+  margin-bottom: 10px;
+}
+
+#deletePatientDialog select {
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#deletePatientDialog button {
+  margin: 5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#deletePatientDialog button:first-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+#deletePatientDialog button:last-of-type {
+  background-color: #4caf50;
+  color: white;
+}
+
+#deletePatientDialog button:hover {
+  opacity: 0.8;
+}
+
+.medicine-search-bar {
+  width: 200px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the element */
+  display: block; /* Ensure it's a block-level element */
+}
+
+#medicineSelect {
+  width: 200px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  margin-bottom: 10px; /* Space below the select */
+}

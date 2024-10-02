@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doctor's Patient Database</title>
+    <link rel="stylesheet" href="DRstyle.css" />
+    <style>
+      .add-patient-form {
+        display: none; /* Hide the form by default */
+        margin-top: 10px; /* Add some space above the form */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="user-select: none">____</h1>
+      <input
+        type="text"
+        id="searchBar"
+        class="search-bar"
+        placeholder="Search for patients..."
+        onkeyup="searchPatients()"
+      />
+      <div
+        class="add-patient"
+        style="user-select: none; cursor: pointer; margin-top: 10px"
+        onclick="toggleAddPatientForm()"
+      >
+        Edit Patients
+      </div>
+      <div class="add-patient-form" id="addPatientForm">
+        <input type="text" id="patientName" placeholder="Name" />
+        <select id="patientGender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <input type="number" id="patientAge" placeholder="Age" />
+        <input type="text" id="patientNationality" placeholder="Nationality" />
+        <input
+          type="date"
+          id="patientLastCheckup"
+          placeholder="Last Check-up Date"
+        />
+        <textarea id="patientNotes" placeholder="Notes"></textarea>
+
+        <div style="display: flex; align-items: flex-start">
+          <input
+            type="text"
+            id="medicineSearch"
+            class="medicine-search-bar"
+            placeholder="Search or add medicines..."
+            onkeyup="searchMedicines()"
+            style="margin-bottom: 10px"
+          />
+        </div>
+        <div>
+          <select id="medicineSelect" multiple size="10">
+            <option value="Aspirin">Aspirin</option>
+            <option value="Ibuprofen">Ibuprofen</option>
+            <option value="Paracetamol">Paracetamol</option>
+            <option value="Amoxicillin">Amoxicillin</option>
+            <option value="Metformin">Metformin</option>
+            <option value="Amlodipine">Amlodipine</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div>
+          <button
+            style="background-color: blue; color: white"
+            onclick="addMedicine()"
+          >
+            Add Medicine
+          </button>
+        </div>
+
+        <button onclick="addPatient()">Add</button>
+        <button onclick="deletePatient()">Delete</button>
+
+        <dialog id="deletePatientDialog">
+          <div>
+            <p>Select the patient to delete:</p>
+            <select id="patientToDelete"></select>
+            <button onclick="confirmDelete()">Delete</button>
+            <button
+              onclick="document.getElementById('deletePatientDialog').close()"
+            >
+              Cancel
+            </button>
+          </div>
+        </dialog>
+      </div>
+      <ul id="patientList" class="patient-list"></ul>
+      <!-- Moved here -->
+    </div>
+
+    <script src="drScript.js"></script>
+  </body>
+</html>
